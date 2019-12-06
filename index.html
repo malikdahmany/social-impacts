@@ -174,12 +174,7 @@ https://templatemo.com/tm-531-reflux
                 </p>
               </div>
             </div>
-            
-            </div>
-          </div>
-        </div>
-      </section>
-<div class="col-md-6">
+            <div class="col-md-6">
               <div class="service-item">
                 <div class="fourth-service-icon service-icon"></div>
                 <h4>Admin Dashboard</h4>
@@ -189,6 +184,11 @@ https://templatemo.com/tm-531-reflux
                   leo nec felis porttitor.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">
@@ -449,14 +449,12 @@ https://templatemo.com/tm-531-reflux
     <script>
       //according to loftblog tut
       $(".main-menu li:first").addClass("active");
-
       var showSection = function showSection(section, isAnimate) {
         var direction = section.replace(/#/, ""),
           reqSection = $(".section").filter(
             '[data-section="' + direction + '"]'
           ),
           reqSectionPos = reqSection.offset().top - 0;
-
         if (isAnimate) {
           $("body, html").animate(
             {
@@ -468,7 +466,6 @@ https://templatemo.com/tm-531-reflux
           $("body, html").scrollTop(reqSectionPos);
         }
       };
-
       var checkSection = function checkSection() {
         $(".section").each(function() {
           var $this = $(this),
@@ -486,12 +483,10 @@ https://templatemo.com/tm-531-reflux
           }
         });
       };
-
       $(".main-menu").on("click", "a", function(e) {
         e.preventDefault();
         showSection($(this).attr("href"), true);
       });
-
       $(window).scroll(function() {
         checkSection();
       });
